@@ -1,23 +1,19 @@
 import java.util.Scanner;
 
-public class ProjectQ3 {
+public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-       
+
         System.out.print("Point A: ");
-        double ax = sc.nextDouble();
-        double ay = sc.nextDouble();
-        Point A = new Point(ax, ay);
+        Point A = new Point(sc.nextDouble(),sc.nextDouble());
 
         System.out.print("Point B: ");
-        double bx = sc.nextDouble();
-        double by = sc.nextDouble();
-        Point B = new Point(bx, by);
+        Point B = new Point(sc.nextDouble(),sc.nextDouble());
 
 
-        System.out.println("A = " + A.toString() + " B = " + B.toString() +
-                           " Distance = " + A.distance(B));
+        System.out.println("A = " + A.toString() + "  B = " + B.toString() +
+                "  Distance = " + A.distance(B));
 
 
         System.out.print("Move the points: ");
@@ -29,8 +25,8 @@ public class ProjectQ3 {
         B.translate(dx, dy);
 
 
-        System.out.println("A = " + A.toString() + " B = " + B.toString() +
-                           " Distance = " + A.distance(B));
+        System.out.println("A = " + A.toString() + "  B = " + B.toString() +
+                "  Distance = " + A.distance(B));
 
         if (A.equals(B)) {
             System.out.println("A and B are at the same position.");
