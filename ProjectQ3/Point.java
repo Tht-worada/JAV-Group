@@ -1,6 +1,5 @@
 public class Point {
-    private double x;
-    private double y;
+    private double x, y;
 
     public Point(double x, double y) {
         this.x = x;
@@ -9,9 +8,8 @@ public class Point {
 
 
     public double distance(Point other) {
-        double dx = this.x - other.x;
-        double dy = this.y - other.y;
-        return Math.sqrt(dx * dx + dy * dy);
+        return (Math.sqrt(Math.pow((this.x-other.x),2)+
+                Math.pow((this.y-other.y),2)));
     }
 
 
@@ -22,9 +20,7 @@ public class Point {
 
 
     public boolean equals(Point other) {
-        double epsilon = 1e-9;
-        return Math.abs(this.x - other.x) < epsilon &&
-               Math.abs(this.y - other.y) < epsilon;
+        return (this.x == other.x && this.y == other.y);
     }
 
     public String toString() {
